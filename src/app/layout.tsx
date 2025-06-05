@@ -1,20 +1,21 @@
+import { clsx } from "clsx";
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import "./globals.css";
 import { memo, ReactNode } from "react";
 
-const geistSans = Geist({
+const notoSans = Noto_Sans({
   display: "swap",
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  variable: "--font-noto-sans",
 });
 
-const APP_NAME = "appName";
-const TITLE = "title";
-const DESCRIPTION = "description";
+const APP_NAME = "Testimonial Card";
+const TITLE = APP_NAME;
+const DESCRIPTION = `GreatFrontEnd challenge: ${APP_NAME}`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://placeholder.example.com"),
+  metadataBase: new URL("https://gfe-testimonial-card-jgerard.vercel.app"),
   title: {
     template: `%s | ${APP_NAME}`,
     default: TITLE,
@@ -35,8 +36,16 @@ type Props = {
 
 const RootLayout = ({ children }: Props) => {
   return (
-    <html className={geistSans.variable} lang="en-US">
-      <body className="font-sans">{children}</body>
+    <html className={notoSans.variable} lang="en-US">
+      <body
+        className={clsx(
+          "min-h-screen px-[1.09375rem] py-50",
+          "bg-linear-148 from-[#F9FAFB] from-[8.89%] to-[#D2D6DB] to-[100.48%]",
+          "font-sans text-base font-normal not-italic",
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 };
