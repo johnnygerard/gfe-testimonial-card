@@ -1,3 +1,4 @@
+import { clsx } from "clsx";
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
@@ -36,7 +37,14 @@ type Props = {
 const RootLayout = ({ children }: Props) => {
   return (
     <html className={notoSans.variable} lang="en-US">
-      <body className="font-sans">{children}</body>
+      <body
+        className={clsx(
+          "font-sans",
+          "bg-linear-148 from-[#F9FAFB] from-[8.89%] to-[#D2D6DB] to-[100.48%]",
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 };
