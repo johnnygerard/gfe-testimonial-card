@@ -29,11 +29,11 @@ export const Testimonial = memo((props: Props) => {
             priority
           />
         </div>
-        <div>
-          <p className="text-lg font-semibold text-neutral-900">
+        <div className="overflow-hidden">
+          <p className="truncate text-lg font-semibold text-neutral-900">
             {props.fullName}
           </p>
-          <p className="mt-[0.0625rem] text-sm">@{props.username}</p>
+          <p className="mt-[0.0625rem] truncate text-sm">@{props.username}</p>
         </div>
       </div>
       {/* Testimonial */}
