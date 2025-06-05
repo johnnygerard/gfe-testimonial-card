@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import "./globals.css";
 import { memo, ReactNode } from "react";
 
-const geistSans = Geist({
+const notoSans = Noto_Sans({
   display: "swap",
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  variable: "--font-noto-sans",
 });
 
 const APP_NAME = "appName";
@@ -35,7 +35,7 @@ type Props = {
 
 const RootLayout = ({ children }: Props) => {
   return (
-    <html className={geistSans.variable} lang="en-US">
+    <html className={notoSans.variable} lang="en-US">
       <body className="font-sans">{children}</body>
     </html>
   );
