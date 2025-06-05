@@ -39,8 +39,9 @@ const RootLayout = ({ children }: Props) => {
     <html className={notoSans.variable} lang="en-US">
       <body
         className={clsx(
-          "font-sans",
+          "min-h-screen px-[1.09375rem] py-50",
           "bg-linear-148 from-[#F9FAFB] from-[8.89%] to-[#D2D6DB] to-[100.48%]",
+          "font-sans text-base font-normal not-italic",
         )}
       >
         {children}
