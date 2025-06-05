@@ -10,12 +10,12 @@ const notoSans = Noto_Sans({
   variable: "--font-noto-sans",
 });
 
-const APP_NAME = "appName";
-const TITLE = "title";
-const DESCRIPTION = "description";
+const APP_NAME = "Testimonial Card";
+const TITLE = APP_NAME;
+const DESCRIPTION = `GreatFrontEnd challenge: ${APP_NAME}`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://placeholder.example.com"),
+  metadataBase: new URL("https://gfe-testimonial-card-jgerard.vercel.app"),
   title: {
     template: `%s | ${APP_NAME}`,
     default: TITLE,
